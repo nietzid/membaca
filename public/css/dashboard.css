@@ -1,0 +1,13 @@
+body {
+    background: url('/img/bg_two.png') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+}
+.title {
+    font-size: 68px;
+    background: -webkit-linear-gradient(315deg, #ffd045 0%, #d14545 74%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
