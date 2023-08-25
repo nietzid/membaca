@@ -2,6 +2,8 @@
 
 namespace App\Controllers;
 
+use App\Models\CeritaModel;
+
 class HomeController extends BaseController
 {
     public function index(): string
@@ -13,9 +15,5 @@ class HomeController extends BaseController
     {
         return view('dashboard');
     }
-
-    public function materi(): string
-    {
-        return view('materi');
-    }
+    
 }

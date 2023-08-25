@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Bootstrap demo</title>
+    <title>Membaca - Cerita</title>
     <link rel="stylesheet" href="/css/dashboard.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
 </head>
@@ -16,7 +16,7 @@
         </div>
     </div>
     <div class="d-flex flex-column align-content-center">
-        <embed class="mx-auto" src="/KSNK2020.pdf" type="application/pdf" width="60%" height="1000px" />
+        <embed class="mx-auto" src="<?=$cerita['berkas_path']?>" type="application/pdf" width="60%" height="1000px" />
         <div class="d-flex flex-row justify-content-end m-5">
             <a href="/test" class="mx-2 justify-self0">
                 <button class="btn btn-warning btn-lg">Lanjut</button>

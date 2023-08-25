@@ -34,7 +34,8 @@ $routes->get('/login', 'AuthController::login');
 $routes->post('/login', 'AuthController::loggingIn');
 $routes->get('/logout', 'AuthController::logout');
 $routes->get('/dashboard', 'HomeController::dashboard', ['filter' => 'auth']);
-$routes->get('/materi', 'HomeController::materi',  ['filter' => 'auth']);
+$routes->get('/materi', 'BacaController::materi',  ['filter' => 'auth']);
+$routes->get('/test', 'BacaController::test',  ['filter' => 'auth']);
 
 /*
  * --------------------------------------------------------------------
