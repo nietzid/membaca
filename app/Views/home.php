@@ -16,9 +16,8 @@
                 <h1 class="title text-center">Literasi Membaca</h1>
                 <div class="d-flex row justify-content-center ">
                     <a href="/login">
-                        <button type="button" class="btn btn-primary btn-lg w-100">Login</button>
+                        <button type="button" class="btn btn-primary btn-lg w-100">Masuk</button>
                     </a>
-                    <a class="ml-0 mt-3" href="">Belum punya akun?</a>
                 </div>
             </div>
         </div>

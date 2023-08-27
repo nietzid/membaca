@@ -12,7 +12,7 @@
 <body>
     <div class="d-flex flex-row justify-content-between">
         <div class="d-flex flex-column row m-5">
-            <h1 class="text-white">Hi Gegen!</h1>
+            <h1 class="text-white">Hi <?= session('nama') ?>!</h1>
             <h2 class="text-white">Selamat, saat ini kamu level <?= session('level') ?></h2>
         </div>
         <div class="justify-content-end m-5">
