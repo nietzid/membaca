@@ -40,6 +40,12 @@ $routes->post('/test', 'BacaController::submitTest',  ['filter' => 'auth']);
 $routes->get('/test_result', 'BacaController::testResult',  ['filter' => 'auth']);
 $routes->get('/test_result', 'BacaController::testResult',  ['filter' => 'auth']);
 $routes->get('/lvl-result', 'BacaController::lvlResult',  ['filter' => 'auth']);
+$routes->get('/belajar', 'BelajarController::index',  ['filter' => 'auth']);
+$routes->get('/belajar/baru', 'BelajarController::baru',  ['filter' => 'auth']);
+$routes->get('/belajar/hikmah', 'BelajarController::hikmah',  ['filter' => 'auth']);
+$routes->post('/belajar/hikmah', 'BelajarController::submitHikmah',  ['filter' => 'auth']);
+$routes->post('save-komentar', 'BelajarController::submitKomentar',  ['filter' => 'auth']);
+$routes->post('save-reaction', 'BelajarController::submitReaction',  ['filter' => 'auth']);
 
 
 /*

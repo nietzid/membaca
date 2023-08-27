@@ -27,7 +27,7 @@
             <a href="/materi" class="mx-2">
                 <button class="btn btn-info btn-lg">Mulai</button>
             </a>
-            <a href="/" class="mx-2">
+            <a href="/belajar" class="mx-2">
                 <button class="btn btn-info btn-lg">Belajar</button>
             </a>
         </div>

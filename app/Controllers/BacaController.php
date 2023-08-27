@@ -19,7 +19,7 @@ class BacaController extends BaseController
         }
         
         $cerita = new CeritaModel();
-        $ceritaData = $cerita->where('level', $current_lv)->get()->getResultArray();
+        $ceritaData = $cerita->where('level', $current_lv)->where('flag',1)->get()->getResultArray();
         $randIndex = rand(0, (count($ceritaData) - 1));
         $data = [
             'cerita' => $ceritaData[$randIndex]

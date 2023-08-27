@@ -30,6 +30,7 @@
                                 <option value="4">Kelas 4</option>
                                 <option value="5">Kelas 5</option>
                                 <option value="6">Kelas 6</option>
+                                <option value="7">Guru</option>
                             </select>
                         </div>
                         <button type="submit" class="btn btn-primary">Masuk</button>
