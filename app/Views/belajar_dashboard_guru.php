@@ -77,7 +77,7 @@
                     <form action="<?= base_url('save-reaction'); ?>" method="post">
                         <?= csrf_field(); ?>
                         <div class="modal-body">
-                            <input type="hidden" name="id">
+                            <input type="text" name="id" id="id" class="form-control idReaction" value=""/>
                             <div class="mb-3">
                                 <label for="message-text" class="col-form-label">Reaction:</label>
                                 <select class="form-select" aria-label="reaction" id="reaction" name="reaction" >
@@ -108,7 +108,7 @@
                 <form action="<?= base_url('save-komentar'); ?>" method="post">
                     <?= csrf_field(); ?>
                     <div class="modal-body">
-                        <input type="hidden" name="id">
+                        <input type="text" name="id" id="id" class="form-control idKomentar" type="text" value=""/>
                         <div class="mb-3">
                             <label for="message-text" class="col-form-label">Komentar:</label>
                             <textarea class="form-control" id="komentar" name="komentar"></textarea>
@@ -128,15 +128,15 @@
         komentarModal.addEventListener('show.bs.modal', event => {
             const button = event.relatedTarget
             const recipient = button.getAttribute('data-bs-id')
-            const modalBodyInput = exampleModal.querySelector('.modal-body input')
-            console.log(recipient)
+            const modalBodyInput = komentarModal.querySelector('.idKomentar')
             modalBodyInput.value = recipient
         })
         const reactionModal = document.getElementById('reactionModal')
-        komentarModal.addEventListener('show.bs.modal', event => {
+        reactionModal.addEventListener('show.bs.modal', event => {
             const button = event.relatedTarget
             const recipient = button.getAttribute('data-bs-id')
-            const modalBodyInput = exampleModal.querySelector('.modal-body input')
+            console.log(recipient)
+            const modalBodyInput = reactionModal.querySelector('.idReaction')
             modalBodyInput.value = recipient
         })
     </script>

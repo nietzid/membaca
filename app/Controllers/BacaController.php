@@ -16,6 +16,8 @@ class BacaController extends BaseController
         if($current_lv >= 'G'){
             session()->set('current_level', 'A');
             return redirect()->to(base_url('lvl-result'));
+        }else if($current_lv == 'A'){
+            session()->set('score',0);
         }
         
         $cerita = new CeritaModel();
@@ -76,8 +78,19 @@ class BacaController extends BaseController
         $user = new AuthModel();
         $level = (int)(((session()->get('score'))-1)/3);
         $level = chr(ord('A')+ $level);
+        $status = 0;
+        if($level > session()->get('level')){
+            $status = 1;
+        }else{
+            if($level == 'F'){
+                $status = 1;
+            }else{
+                $status = 0;
+            }
+        }
+        session()->set('status', $status);
         session()->set('level',$level);
-        $user->update(session()->get('id'), ['level' => $level]);
+        $user->update(session()->get('id'), ['level' => $level, 'status' => $status]);
         session()->set('score',0);
         return view('lvl_result');
     }
