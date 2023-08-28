@@ -23,7 +23,7 @@ class BelajarController extends BaseController
         $belajarData = $belajar->get()->getResultArray();
         $belajarData = array_column($belajarData, 'bacaan_id');
         $cerita = new CeritaModel();
-        $randomCerita = $cerita->whereNotIn('id', $belajarData)->orderBy('rand()')->first()->get()->getResultArray();
+        $randomCerita = $cerita->whereNotIn('id', $belajarData)->orderBy('rand()')->first();
         $data = [
             'cerita' => $randomCerita
         ];
